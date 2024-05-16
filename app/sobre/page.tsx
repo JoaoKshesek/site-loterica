@@ -1,5 +1,5 @@
 "use client";
 
-export default function SignUp() {
+export default function About() {
   return <main></main>;
 }

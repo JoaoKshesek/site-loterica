@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LinkContent = styled.a`
-  color: var(--tints_primary_100);
+  color: var(--neutrals_gray_200);
   font-family: var(--font_primary);
   font-size: 1.5rem;
   line-height: 2rem;
@@ -11,6 +11,6 @@ export const LinkContent = styled.a`
 
   &:hover {
     cursor: pointer;
-    color: var(--tints_primary_100);
+    color: var(--tints_secondary_100);
   }
 `;

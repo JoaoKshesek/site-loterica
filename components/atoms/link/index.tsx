@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { LinkContent } from "./styles";
 import { useRouter } from "next/navigation";
 

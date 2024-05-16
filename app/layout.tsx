@@ -1,12 +1,13 @@
 "use client";
 import StyledComponentsRegistry from "./registry";
-import { Raleway } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+import { Footer, Header } from "@/components";
 
-const raleway = Raleway({
-  subsets: ["latin"],
-  display: "swap",
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin", "latin-ext"],
 });
 export default function RootLayout({
   children,
@@ -14,11 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br" className={raleway.className}>
+    <html lang="pt-br" className={poppins.className}>
       <title>Signotech Web</title>
       <body>
         <Provider store={store}>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            <Header />
+            {children}
+            <Footer />
+          </StyledComponentsRegistry>
         </Provider>
       </body>
     </html>

@@ -1,5 +1,5 @@
 "use client";
 
-export default function SignUp() {
+export default function TermsOfUse() {
   return <main></main>;
 }
