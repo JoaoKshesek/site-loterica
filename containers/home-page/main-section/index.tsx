@@ -1,12 +1,14 @@
 "use client";
 import { Container, Section } from "@/components";
+import { TitleText, Content } from "./styles";
 
 export function MainSection() {
   return (
-    <Section>
-      <Container>
-        <h1>Confie na sua sorte, comece apostando agora!</h1>
-      </Container>
-    </Section>
+    <Container>
+      <Section>
+        <TitleText>Confie na sua sorte, comece apostando agora!</TitleText>
+        <Content></Content>
+      </Section>
+    </Container>
   );
 }
