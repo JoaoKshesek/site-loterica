@@ -43,7 +43,11 @@ export function GameCard({ game }: GameCardProps) {
 
   return (
     <GameCardContainer game_color={game.color}>
-      {!game.accumulated && <GameSpanTag ><GameSpanTagText game_color={game.color}>Acumulou!</GameSpanTagText></GameSpanTag>}
+      {!game.accumulated && (
+        <GameSpanTag>
+          <GameSpanTagText game_color={game.color}>Acumulou!</GameSpanTagText>
+        </GameSpanTag>
+      )}
       <GameCardContent game_color={game.color}>
         <GameCardContentInfo>
           <GameTitle>{game.title}</GameTitle>

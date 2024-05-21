@@ -10,7 +10,7 @@ export const GameCardContainer = styled.div<GameCardContainerProps>`
   position: relative;
 `;
 
-export const GameSpanTag = styled.div<GameCardContainerProps>`
+export const GameSpanTag = styled.div`
   position: absolute;
   top: 0;
   z-index: -1;
