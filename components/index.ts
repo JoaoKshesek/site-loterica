@@ -11,6 +11,12 @@ export { GuestGuard } from "./features/guest-guard";
 export { ControlledInput } from "./features/form-fields/controlled-input";
 export { ControlledPasswordInput } from "./features/form-fields/controlled-password-input";
 
+// MOLECULES 
+export { CreditCard } from "./molecules/cards/credit-card";
+export { GameCard } from "./molecules/cards/game-card";
+
+
+
 // ORGANISMS
 export { Container } from "./organisms/container";
 export { Footer } from "./organisms/footer";

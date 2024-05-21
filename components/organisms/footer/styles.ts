@@ -30,7 +30,7 @@ export const FooterContent = styled.div`
 export const FooterDivider = styled.hr`
   width: 100%;
   height: 0.1px;
-  background: var(--neutrals_gray_100);
+  background: var(--neutrals_gray_200);
   margin: 4rem 0;
 `;
 
@@ -90,7 +90,6 @@ export const Copyright = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(neutrals_gray_100);
 `;
 
 export const CopyrightSecurity = styled.div`
@@ -103,7 +102,7 @@ export const CopyrightSecurity = styled.div`
 `;
 
 export const CopyrightText = styled.p`
-  color: var(--neutrals_gray_300);
+  color: var(--neutrals_gray_400);
   font-family: var(--font_primary);
   font-size: 1.4rem;
 `;

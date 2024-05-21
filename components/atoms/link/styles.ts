@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LinkContent = styled.a`
-  color: var(--neutrals_gray_200);
+  color: var(--neutrals_gray_300);
   font-family: var(--font_primary);
   font-size: 1.5rem;
   line-height: 2rem;

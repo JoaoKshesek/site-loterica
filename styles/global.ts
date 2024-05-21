@@ -10,9 +10,10 @@ const GlobalStyles = createGlobalStyle`
 
     --neutrals_light_100: #FFFFFF;
     --neutrals_light_200: #F8F8F8;
-    --neutrals_gray_100: #C9C9C9;
-    --neutrals_gray_200: #77808B;
-    --neutrals_gray_300: #8E8E8E;
+    --neutrals_gray_100: #dcdcdc;
+    --neutrals_gray_200: #C9C9C9;
+    --neutrals_gray_300: #77808B;
+    --neutrals_gray_400: #8E8E8E;
     --neutrals_dark_100: #000000;
     --neutrals_dark_200: #1C1C1C;
 
@@ -44,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
   };
 
   body {
-    color: var(--neutrals_gray_200);
+    color: var(--neutrals_gray_300);
     background: var(--neutrals_light_100);
   }
   main{
