@@ -118,7 +118,7 @@ export function Header() {
             priority={true}
             src={"/assets/logo-small.svg"}
             alt="Logo Lotérica"
-            height={56}
+            height={57}
             width={170}
             onClick={() => router.push("/")}
           />

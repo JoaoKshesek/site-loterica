@@ -148,8 +148,8 @@ export function Footer() {
             <CopyrightText>Plataforma: Sua Lotérica Online</CopyrightText>
             <Image
               src={"/assets/icons/shield.svg"}
-              width={60}
-              height={49}
+              width={49}
+              height={60}
               alt="Ícone Escudo"
             />
           </CopyrightSecurity>

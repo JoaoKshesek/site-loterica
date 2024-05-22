@@ -106,7 +106,7 @@ export function HomeGamesSection() {
       <Container>
         <TitleText>Confie na sua sorte, comece apostando agora!</TitleText>
         <MainCardsContainer>
-          <GameCard key={mainGame.id} game={mainGame} mainCard />
+          <GameCard key={mainGame.id} game={mainGame} card_type={"main"} />
           <CreditCard />
         </MainCardsContainer>
         <GameCardsContainer>

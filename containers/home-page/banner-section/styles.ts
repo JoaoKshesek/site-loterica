@@ -5,7 +5,7 @@ export const Content = styled.div`
   margin-top:9.6rem;
   >img {
     width: 100%;
-    height: 30rem;
+    height: auto;
     object-fit: cover;
   }
 `;

@@ -15,7 +15,6 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   > img {
-    width: 17rem;
     height: auto;
     cursor: pointer;
     transition: all ease-in 100ms;
