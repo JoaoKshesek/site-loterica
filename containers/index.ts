@@ -1,6 +1,9 @@
 //ABOUT PAGE
 export { AboutContentSection } from "./about-page/content-section";
 
+//BUY CREDITS PAGE
+export { BuyCreditsContentSection } from "./buy-credits-page/content-section";
+
 //CHECKOUT PAGE
 export { CheckoutContentSection } from "./checkout-page/content-section";
 
