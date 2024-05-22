@@ -1,7 +1,8 @@
 "use client";
+
 import { Container, Section } from "@/components";
 
-export function GamePackSection() {
+export function HomeGamePackSection() {
   return (
     <Section>
       <Container>

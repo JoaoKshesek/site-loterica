@@ -1,5 +1,11 @@
 "use client";
 
+import { PolicyPrivacyContentSection } from "@/containers";
+
 export default function PolicyPrivacy() {
-  return <main></main>;
+  return (
+    <main>
+      <PolicyPrivacyContentSection />
+    </main>
+  );
 }

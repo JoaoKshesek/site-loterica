@@ -1,5 +1,11 @@
 "use client";
 
+import { SupportContentSection } from "@/containers";
+
 export default function Support() {
-  return <main></main>;
+  return (
+    <main>
+      <SupportContentSection />
+    </main>
+  );
 }

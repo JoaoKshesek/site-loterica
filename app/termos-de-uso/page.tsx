@@ -1,5 +1,11 @@
 "use client";
 
+import { TermsOfUseContentSection } from "@/containers";
+
 export default function TermsOfUse() {
-  return <main></main>;
+  return (
+    <main>
+      <TermsOfUseContentSection />
+    </main>
+  );
 }

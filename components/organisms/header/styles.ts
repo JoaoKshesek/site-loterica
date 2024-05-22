@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   background: var(--neutrals_light_200);
 `;
 
-export const HeaderContainer = styled.footer`
+export const HeaderContainer = styled.header`
   width: 100%;
   display: flex;
   align-items: center;

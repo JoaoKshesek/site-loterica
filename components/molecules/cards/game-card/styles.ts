@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 interface GameCardContainerProps {
-  game_color: string;
+  game_color?: string;
+  main_card?:boolean
 }
 
 export const GameCardContainer = styled.div<GameCardContainerProps>`
-  max-width: 23%;
-  padding-top: 3rem;
   position: relative;
+  width: ${props => (props.main_card ? "100%" : "22%")};
+  margin-top: ${props => (props.main_card ? "0" : "3rem")};
+  padding-top: 3rem;
 `;
 
 export const GameSpanTag = styled.div`
@@ -34,41 +36,45 @@ export const GameSpanTagText = styled.div<GameCardContainerProps>`
 `;
 
 export const GameCardContent = styled.div<GameCardContainerProps>`
-  background: ${(props) => props.game_color};
+  height: ${props => (props.main_card ? "20rem" : "auto")};
   display: flex;
-  flex-direction: column;
+  flex-direction: ${props => (props.main_card ? "row" : "column")};
+  align-items: ${props => (props.main_card ? "center" : "flex-start")};
+  justify-content: ${props => (props.main_card ? "space-between" : "flex-start")};
   gap: 2rem;
-  padding: 1.6rem 2rem;
+  padding: ${props => (props.main_card ? "3.8rem 6.4rem 3.8rem 3.2rem " : "1.6rem 2rem")};
   border-radius: 1rem;
+  background: ${(props) => props.game_color};
 `;
+
 export const GameCardContentInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `;
 
-export const GameTitle = styled.div`
+export const GameTitle = styled.div<GameCardContainerProps>`
   color: var(--neutrals_light_100);
   font-family: var(--font_primary);
-  font-size: 2rem;
+  font-size: ${props => (props.main_card ? "3rem" : "2rem")};
   font-weight: 600;
   text-transform: uppercase;
 `;
 
-export const GameAmount = styled.div`
+export const GameAmount = styled.div<GameCardContainerProps>`
   color: var(--neutrals_light_100);
   font-family: var(--font_primary);
-  font-size: 2.4rem;
+  font-size: ${props => (props.main_card ? "3.6rem" : "2.4rem")};
   font-weight: 600;
 `;
 
-export const GameContest = styled.p`
+export const GameContest = styled.p<GameCardContainerProps>`
   display: flex;
   align-items: center;
   gap: 0.4rem;
   color: var(--neutrals_light_100);
   font-family: var(--font_primary);
-  font-size: 1.4rem;
+  font-size: ${props => (props.main_card ? "2rem" : "1.4rem")};
   text-transform: uppercase;
   font-weight: 500;
 `;
@@ -82,17 +88,18 @@ export const GameContestDate = styled.small`
 `;
 
 export const GameButton = styled.div<GameCardContainerProps>`
-  width: 100%;
+  width: ${props => (props.main_card ? "28rem" : "100%")};
+  height: ${props => (props.main_card ? "6rem" : "4rem")};
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   padding: 1.2rem;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   background: var(--neutrals_light_100);
   color: ${(props) => props.game_color};
   font-family: var(--font_primary);
-  font-size: 1.4rem;
+  font-size: ${props => (props.main_card ? "1.8rem" : "1.4rem")};
   font-weight: 700;
   text-transform: uppercase;
   transition: all ease-in 100ms;

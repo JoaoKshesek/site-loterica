@@ -1,5 +1,11 @@
 "use client";
 
+import { SignUpFormSection } from "@/containers";
+
 export default function SignUp() {
-  return <main></main>;
+  return (
+    <main>
+      <SignUpFormSection />
+    </main>
+  );
 }

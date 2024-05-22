@@ -1,12 +1,13 @@
 "use client";
+
 import Image from "next/image";
 import { Container, Section } from "@/components";
 import { Content } from "./styles";
 
-export function BannerSection() {
+export function HomeBannerSection() {
   return (
-    <Container>
-      <Section>
+    <Section>
+      <Container>
         <Content>
           <Image
             src={"/assets/banner.png"}
@@ -15,7 +16,7 @@ export function BannerSection() {
             alt="Banner"
           />
         </Content>
-      </Section>
-    </Container>
+      </Container>
+    </Section>
   );
 }

@@ -1,21 +1,22 @@
 "use client";
-
 import {
-  BannerSection,
-  MainSection,
-  GamesSection,
-  DailyGamesSection,
-  GamePackSection,
+  HomeBannerSection,
+  HomeDailyGamesSection,
+  HomeGamesSection,
+  HomeGamePackSection,
+  HomeNewsletterSection,
+  HomeTestimonialsSection,
 } from "@/containers";
 
 export default function Home() {
   return (
     <main>
-      <BannerSection />
-      <MainSection />
-      <GamesSection />
-      <DailyGamesSection />
-      <GamePackSection />
+      <HomeBannerSection />
+      <HomeGamesSection />
+      <HomeDailyGamesSection />
+      <HomeGamePackSection />
+      <HomeTestimonialsSection />
+      <HomeNewsletterSection />
     </main>
   );
 }

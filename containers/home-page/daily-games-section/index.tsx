@@ -1,7 +1,8 @@
 "use client";
+
 import { Container, Section } from "@/components";
 
-export function DailyGamesSection() {
+export function HomeDailyGamesSection() {
   return (
     <Section>
       <Container>

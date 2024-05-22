@@ -1,6 +1,7 @@
 "use client";
+
 import { Container, CreditCard, GameCard, Section } from "@/components";
-import { GameCardsContainer } from "./styles";
+import { GameCardsContainer, MainCardsContainer, TitleText } from "./styles";
 
 interface Amount {
   original: number;
@@ -22,16 +23,16 @@ interface Game {
   accumulated: boolean;
 }
 
-export function GamesSection() {
+export function HomeGamesSection() {
   const games: Game[] = [
     {
       id: 1,
       title: "Mega-Sena",
       slug: "mega-sena",
-      color: "#43B77B",
+      color: "#1BB565",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: true,
     },
     {
       id: 2,
@@ -40,7 +41,7 @@ export function GamesSection() {
       color: "#9C6AC4",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 3,
@@ -49,7 +50,7 @@ export function GamesSection() {
       color: "#CC7AD0",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 4,
@@ -58,7 +59,7 @@ export function GamesSection() {
       color: "#FE914C",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 5,
@@ -67,7 +68,7 @@ export function GamesSection() {
       color: "#F2BA2A",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 6,
@@ -76,7 +77,7 @@ export function GamesSection() {
       color: "#E84963",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 7,
@@ -85,7 +86,7 @@ export function GamesSection() {
       color: "#FFAA47",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
     {
       id: 8,
@@ -94,16 +95,22 @@ export function GamesSection() {
       color: "#AED153",
       contest: { next_contest: "2000", next_date: "28/05/2024" },
       amount: { original: 50000.0, formatted: "R$5.000.000,00" },
-      accumulated: false
+      accumulated: false,
     },
   ];
+
+  const [mainGame, ...otherGames] = games;
 
   return (
     <Section>
       <Container>
-        <CreditCard />
+        <TitleText>Confie na sua sorte, comece apostando agora!</TitleText>
+        <MainCardsContainer>
+          <GameCard key={mainGame.id} game={mainGame} mainCard />
+          <CreditCard />
+        </MainCardsContainer>
         <GameCardsContainer>
-        {games.map((game) => (
+          {otherGames.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </GameCardsContainer>

@@ -144,7 +144,7 @@ export function Header() {
                 alt="Ícone carrinho"
                 height={40}
                 width={40}
-                onClick={() => router.push("/")}
+                onClick={() => router.push("/checkout")}
               />
             </CartContainer>
             <ProfileContainer>

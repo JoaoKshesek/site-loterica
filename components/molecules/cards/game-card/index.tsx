@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   GameAmount,
@@ -36,29 +35,31 @@ interface Game {
 
 interface GameCardProps {
   game: Game;
+  mainCard?: boolean;
 }
 
-export function GameCard({ game }: GameCardProps) {
+export function GameCard({ game, mainCard }: GameCardProps) {
   const router = useRouter();
 
   return (
-    <GameCardContainer game_color={game.color}>
-      {!game.accumulated && (
+    <GameCardContainer game_color={game.color} main_card={mainCard}>
+      {game.accumulated && (
         <GameSpanTag>
           <GameSpanTagText game_color={game.color}>Acumulou!</GameSpanTagText>
         </GameSpanTag>
       )}
-      <GameCardContent game_color={game.color}>
+      <GameCardContent game_color={game.color} main_card={mainCard}>
         <GameCardContentInfo>
-          <GameTitle>{game.title}</GameTitle>
-          <GameAmount>{game.amount.formatted}</GameAmount>
-          <GameContest>
+          <GameTitle main_card={mainCard}>{game.title}</GameTitle>
+          <GameAmount main_card={mainCard}>{game.amount.formatted}</GameAmount>
+          <GameContest main_card={mainCard}>
             <GameNextContest>{game.contest.next_contest}</GameNextContest>-
             <GameContestDate>{game.contest.next_date}</GameContestDate>
           </GameContest>
         </GameCardContentInfo>
         <GameButton
           game_color={game.color}
+          main_card={mainCard}
           onClick={() => router.push(`/jogos/${game.slug}`)}
         >
           Faça seu jogo{" "}

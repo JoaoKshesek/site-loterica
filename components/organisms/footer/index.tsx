@@ -66,6 +66,7 @@ export function Footer() {
                 <LinksContentTitle>Minha conta</LinksContentTitle>
                 <Link url="/entrar" textContent={"Entrar"} />
                 <Link url="/cadastre-se" textContent={"Cadastre-se"} />
+                <Link url="/minha-conta" textContent={"Minha conta"} />
                 <Link
                   url="/politica-de-privacidade"
                   textContent={"Política de Privacidade"}
@@ -91,7 +92,7 @@ export function Footer() {
                 {games.map((game) => (
                   <Link
                     key={game.id}
-                    url={`/${game.slug}`}
+                    url={`/jogos/${game.slug}`}
                     textContent={game.title}
                   />
                 ))}
