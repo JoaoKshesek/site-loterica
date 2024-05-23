@@ -11,7 +11,7 @@ export const CreditCardContainer = styled.div`
   border: 1px solid var(--neutrals_gray_100);
   background: var(--neutrals_light_100);
   margin-top: 3rem;
-  width: 40%;
+  width: 35%;
   height: 20rem;
 `;
 

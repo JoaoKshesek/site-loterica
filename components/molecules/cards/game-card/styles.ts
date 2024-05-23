@@ -7,7 +7,7 @@ interface GameCardContainerProps {
 
 export const GameCardContainer = styled.div<GameCardContainerProps>`
   position: relative;
-  width: ${(props) => (props.$card_type == "main" ? "100%" : "22%")};
+  width: ${(props) => (props.$card_type == "main" ? "65%" : "22%")};
   margin-top: ${(props) => (props.$card_type == "main" ? "0" : "3rem")};
   padding-top: 3rem;
 `;
